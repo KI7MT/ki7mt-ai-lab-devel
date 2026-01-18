@@ -1,0 +1,11 @@
+# Build outputs
+build/
+dist/
+*.rpm
+*.src.rpm
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*~
