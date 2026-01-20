@@ -6,7 +6,7 @@
 # Target: Rocky Linux 9.x with NVIDIA RTX 5090 (sm_120 Blackwell)
 
 Name:           ki7mt-ai-lab-devel
-Version:        2.0.0
+Version:        2.0.3
 Release:        1%{?dist}
 Summary:        Development environment for KI7MT AI Lab
 License:        MIT
@@ -51,7 +51,7 @@ Requires:       golang >= 1.22
 #     dnf config-manager --add-repo \
 #       https://developer.download.nvidia.com/compute/cuda/repos/rhel10/x86_64/cuda-rhel10.repo
 #
-# Note: As of 2026-01, NVIDIA's latest validated platform is RHEL 9.x.
+# Note: As of 2025-01, NVIDIA's latest validated platform is RHEL 9.x.
 #       Rocky 10.1 may require RHEL 9 compat repo or waiting for NVIDIA 10.x support.
 #       Plan: Standardize on Rocky 9.x for production (EPYC + 9950X3D).
 # =============================================================================
@@ -140,7 +140,11 @@ echo "  - Compression utilities (pigz, zstd, lz4)" >> %{buildroot}%{_datadir}/%{
 %{_datadir}/%{name}/README
 
 %changelog
-* Sun Jan 18 2026 KI7MT <ki7mt@ki7mt.com> - 2.0.0-1
+* Mon Jan 20 2025 Greg Beam <ki7mt@yahoo.com> - 2.0.3-1
+- Sync version across all lab packages
+- Fix maintainer email in changelog
+
+* Sun Jan 18 2025 KI7MT <ki7mt@ki7mt.com> - 2.0.0-1
 - Initial release
 - CUDA 12.8+ for RTX 5090 (sm_120 Blackwell) support
 - Go, ClickHouse, Python toolchains
